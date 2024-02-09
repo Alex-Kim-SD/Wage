@@ -1,0 +1,25 @@
+/* src/components/container/Container.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 600px; /* Max width for visual appeal */
+    max-height: 90vh; /* Max height based on viewport height */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+  }
+
+  /* Additional styling for the whole page to ensure full height */
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* Optional: background color for the whole page */
+  }
