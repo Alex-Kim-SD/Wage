@@ -1,16 +1,22 @@
 // src/components/WageInput.js
-import React from 'react';
 
-function WageInput({ hourlyWage, setHourlyWage, startCounter }) {
+function WageInput({ hourlyWage, setHourlyWage, toggleCounter }) {
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && hourlyWage > 0) {
+      toggleCounter();
+    }
+  };
+
   return (
     <div>
       <input
         type="number"
         value={hourlyWage}
         onChange={(e) => setHourlyWage(e.target.value)}
+        onKeyPress={handleKeyPress}
         placeholder="Enter your hourly wage"
       />
-      <button onClick={startCounter}>Start Counter</button>
+      <button onClick={toggleCounter}>Start/Pause Counter</button>
     </div>
   );
 }
